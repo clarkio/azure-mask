@@ -10,12 +10,15 @@
     "content_scripts": [
         {
             "matches": [
-                "*://*.portal.azure.com/*"
+                "*://*.portal.azure.com/*",
+                "*://portal.azure.com/*",
+                "*://functions.azure.com/*"
             ],
             "js": [
                 "/content-script/mask-process.js"
             ],
-            "run_at": "document_end"
+            "run_at": "document_end",
+            "all_frames": true
         }
     ],
     "permissions": [
