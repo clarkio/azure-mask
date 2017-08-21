@@ -1,8 +1,9 @@
-document.getElementById('toggle-all-masks').addEventListener('click', toggleAllMasks);
-
 const sensitiveDataRegex = /^([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})|((([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,})))$/;
 const sensitiveDataClassName = 'azdev-sensitive';
-let allMasksEnabled = false;
+let allMasksEnabled = true;
+
+let allMasksCheckbox = document.getElementById('toggle-all-masks');
+allMasksCheckbox.addEventListener('click', toggleAllMasks);
 
 function toggleAllMasks() {
   console.log('Toggling...');
@@ -11,35 +12,13 @@ function toggleAllMasks() {
 }
 
 function injectEnableAllMasks() {
-  let code = enableAllMasks.toString() + '\n enableAllMasks();';
-  console.log(code);
   chrome.tabs.executeScript({
-    code: code
+    code: 'document.body.classList.add(\'az-mask-enabled\');'
   });
 }
 
 function injectDisableAllMasks() {
-  let code = disableAllMasks.toString() + '\n disableAllMasks();';
-  console.log(code);
   chrome.tabs.executeScript({
-    code: code
+    code: 'document.body.classList.remove(\'az-mask-enabled\');'
   });
-}
-
-function enableAllMasks() {
-  // classList.add
-  const sensitiveDataRegex = /^([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})|((([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,})))$/;
-  const sensitiveDataClassName = 'azdev-sensitive';
-  Array.from(document.getElementsByTagName('*'))
-    .filter(e => sensitiveDataRegex.test(e.textContent))
-    .forEach(e => e.classList.add(sensitiveDataClassName));
-}
-
-function disableAllMasks() {
-  // classList.remove
-  const sensitiveDataRegex = /^([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})|((([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,})))$/;
-  const sensitiveDataClassName = 'azdev-sensitive';
-  Array.from(document.getElementsByTagName('*'))
-    .filter(e => sensitiveDataRegex.test(e.textContent))
-    .forEach(e => e.classList.remove(sensitiveDataClassName));
 }
