@@ -1,0 +1,8 @@
+/* .textshadow .foreverblur {
+   text-shadow: 0 0 32px white;
+   color: transparent;
+} */
+.textshadow .foreverblur {
+   text-shadow: 0 0 10px white;
+   color: rgba(0, 0, 0, 0);
+}
