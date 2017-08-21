@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Azure Mask",
+    "version": "0.1.0",
+    "description": "Conceals sensitive Azure information on the page",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.portal.azure.com/*"
+            ],
+            "js": [
+                "/content-script/mask-process.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
+}
