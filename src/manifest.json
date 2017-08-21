@@ -4,7 +4,8 @@
     "version": "0.1.0",
     "description": "Conceals sensitive Azure information on the page",
     "browser_action": {
-        "default_icon": "icon.png"
+        "default_icon": "icon.png",
+        "default_popup": "/popout/popout.html"
     },
     "content_scripts": [
         {
