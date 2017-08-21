@@ -1,7 +1,6 @@
 unhideSubscriptions();
 
 function unhideSubscriptions() {
-    // let labels = document.getElementsByClassName('fxc-essentials-label');
     let labels = document.getElementsByTagName('label');
     for (i = 0; i < labels.length; i++) {
         if (labels[i].innerHTML === "Subscription ID") {

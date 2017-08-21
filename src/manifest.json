@@ -14,7 +14,8 @@
     "content_scripts": [
         {
             "matches": [
-                "*://*/*"
+                "*://portal.azure.com/*",
+                "*://*.portal.azure.com/*"
             ],
             "js": [
                 "mask-process.js"
