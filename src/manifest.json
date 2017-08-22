@@ -23,6 +23,9 @@
     ],
     "permissions": [
         "activeTab",
-        "storage"
+        "storage",
+        "*://*.portal.azure.com/*",
+        "*://portal.azure.com/*",
+        "*://functions.azure.com/*"
     ]
 }
