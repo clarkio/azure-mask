@@ -13,12 +13,14 @@ function toggleAllMasks() {
 
 function injectEnableAllMasks() {
   chrome.tabs.executeScript({
-    code: 'document.body.classList.add(\'az-mask-enabled\');'
+    code: 'document.body.classList.add(\'az-mask-enabled\');',
+    allFrames: true
   });
 }
 
 function injectDisableAllMasks() {
   chrome.tabs.executeScript({
-    code: 'document.body.classList.remove(\'az-mask-enabled\');'
+    code: 'document.body.classList.remove(\'az-mask-enabled\');',
+    allFrames: true
   });
 }
