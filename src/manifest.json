@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "Azure Mask",
-    "version": "0.2.0",
-    "description": "Conceals sensitive Azure information on the page",
+    "version": "1.0.0",
+    "description": "Conceals sensitive Azure information found in the page",
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "/popout/popout.html"
