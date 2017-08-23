@@ -18,7 +18,7 @@ This is a Chrome extension that will mask GUIDs (such as Subscription IDs) and e
 1. `git clone git@github.com:clarkio/azure-mask.git`
 2. In Chrome go to [chrome://extensions](chrome://extensions)
 3. Check the "Developer mode" option in the top-right corner
-4. Find the version you want of the packaged extension in `/extension/`
+4. Find the version you want of the packaged extension in the folder within the repostiory: `/extension/`
 5. Drag the `azure-mask.crx` file to your Chrome window that has the extensions view open
 6. Confirm any prompts
 
