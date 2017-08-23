@@ -18,7 +18,9 @@ chrome.tabs.executeScript({
 function toggleAllMasks() {
   console.log('Toggling...');
   allMasksEnabled = !allMasksEnabled;
-  allMasksEnabled ? injectEnableAllMasks() : injectDisableAllMasks();
+  chrome.storage.local.set({isMasked: allMasksEnabled}, () => {
+    allMasksEnabled ? injectEnableAllMasks() : injectDisableAllMasks();
+  });
 }
 
 function injectEnableAllMasks() {
