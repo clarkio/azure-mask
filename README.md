@@ -1,8 +1,7 @@
 # Azure Mask
+This is a Chrome extension that will mask GUIDs (such as Subscription IDs) and email addresses with a blur. The intention of the extension is to make it easier to do screen recordings without revealing sensitive, personal, account information that may show up on screen.
 
-## Getting Started
-
-### Install the Extension
+## Install the Extension
 
 #### From Package
 
