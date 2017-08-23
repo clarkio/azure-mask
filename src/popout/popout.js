@@ -5,6 +5,16 @@ let allMasksEnabled = true;
 let allMasksCheckbox = document.getElementById('toggle-all-masks');
 allMasksCheckbox.addEventListener('click', toggleAllMasks);
 
+chrome.tabs.executeScript({
+  code: 'document.body.classList.contains(\'az-mask-enabled\');',
+  allFrames: false
+},
+  results => {
+    allMasksEnabled = results[0];
+    allMasksCheckbox.checked = allMasksEnabled;
+  }
+);
+
 function toggleAllMasks() {
   console.log('Toggling...');
   allMasksEnabled = !allMasksEnabled;
