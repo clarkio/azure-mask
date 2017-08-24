@@ -27,7 +27,7 @@ Array
 // add class to elements that are added to DOM later
 const observer = new MutationObserver(mutations => {
   mutations
-    .filter(m => shouldCheckContent(m.target) && sensitiveDataRegex.test(m.target.textContent))
+    .filter(m => shouldCheckContent(m.target, m.type) && sensitiveDataRegex.test(m.target.textContent))
     .forEach(m => {
       const node = m.type === 'characterData' ? m.target.parentNode : m.target;
       if (node.classList) {
@@ -43,9 +43,9 @@ const config = {
 };
 observer.observe(document.body, config);
 
-function shouldCheckContent(target) {
-  return target
-    && tagNamesToMatch.some(tn => tn === target.tagName);
+function shouldCheckContent(target, mutationType) {
+  return mutationType === 'characterData'
+    || target && tagNamesToMatch.some(tn => tn === target.tagName);
 }
 
 function getStoredMaskedStatus(callback) {
