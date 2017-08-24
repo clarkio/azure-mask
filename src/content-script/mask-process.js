@@ -8,9 +8,10 @@ const blurCss = 'filter: blur(5px);';
 const style = document.createElement('style');
 style.appendChild(document.createTextNode(''));
 document.head.appendChild(style);
+
 style.sheet.insertRule(`.${maskEnabledClassName} .azdev-sensitive { ${blurCss} }`);
-style.sheet.insertRule(`.${maskEnabledClassName} input.azc-bg-light { ${blurCss} }`);
-style.sheet.insertRule(`.${maskEnabledClassName} a.fxs-topbar-reportbug { display:none; }`);
+style.sheet.insertRule(`.${maskEnabledClassName} input.azc-bg-light { ${blurCss} }`); // input boxes used for keys, connection strings, etc
+style.sheet.insertRule(`.${maskEnabledClassName} a.fxs-topbar-reportbug { display:none; }`); // report a bug button (MS internal only)
 
 getStoredMaskedStatus(isMasked => {
   isMasked ? document.body.classList.add(maskEnabledClassName) : document.body.classList.remove(maskEnabledClassName);
