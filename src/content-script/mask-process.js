@@ -45,8 +45,7 @@ observer.observe(document.body, config);
 
 function shouldCheckContent(target) {
   return target
-    && tagNamesToMatch.some(tn => tn === target.tagName)
-    && target.hasChildNodes && target.hasChildNodes();
+    && tagNamesToMatch.some(tn => tn === target.tagName);
 }
 
 function getStoredMaskedStatus(callback) {
