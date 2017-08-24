@@ -2,9 +2,14 @@
     "manifest_version": 2,
     "name": "Azure Mask",
     "version": "1.0.0",
-    "description": "Conceals sensitive Azure information found in the page",
+    "description": "Conceals sensitive Azure information found in the portal views",
+    "icons": { 
+        "16": "/icons/icon16.png",
+        "48": "/icons/icon48.png",
+       "128": "/icons/icon128.png" 
+    },
     "browser_action": {
-        "default_icon": "icon.png",
+        "default_icon": "/icons/icon16.png",
         "default_popup": "/popout/popout.html"
     },
     "content_scripts": [
