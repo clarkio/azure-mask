@@ -10,7 +10,7 @@ style.appendChild(document.createTextNode(''));
 document.head.appendChild(style);
 style.sheet.insertRule(`.${maskEnabledClassName} .azdev-sensitive { ${blurCss} }`);
 style.sheet.insertRule(`.${maskEnabledClassName} input.azc-bg-light { ${blurCss} }`);
-style.sheet.insertRule("a.fxs-topbar-reportbug { display:none; }");
+style.sheet.insertRule(`.${maskEnabledClassName} a.fxs-topbar-reportbug { display:none; }`);
 
 getStoredMaskedStatus(isMasked => {
   isMasked ? document.body.classList.add(maskEnabledClassName) : document.body.classList.remove(maskEnabledClassName);
