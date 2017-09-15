@@ -105,6 +105,10 @@ function getSettings() {
       longLinkSpan.textContent = result.longLink || '';
     }
   );
+
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
+    shortenURLInput.value = tabs[0].url;
+  });
 }
 
 function saveSettings() {
