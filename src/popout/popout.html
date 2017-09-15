@@ -2,16 +2,72 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="bulma.css">
     <link rel="stylesheet" type="text/css" href="popout.css">
 </head>
 
 <body>
-    <label style="align-content: center; display: flex; align-items: center">Toggle All Masks:</label>
-    <label class="switch">
-        <input id="toggle-all-masks" type="checkbox" checked="true" />
-        <span class="slider round"></span>
-    </label>
+    <section class="section wrapper">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <p class="card-header-title">
+                        Mask Portal
+                    </p>
+                </div>
+                <div class="card-content">
+                    <div class="field">
+                        <label for="toggleMasks" class="label">Toggle All Masks</label>
+                        <div class="control">
+                            <label class="switch">
+                                <input id="toggle-all-masks" type="checkbox" checked="true" />
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-header-title">
+                    URL Tracking
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="field">
+                    <div class="control">
+                        <label for="url-to-shorten" class="label">Enter URL</label>
+                        <p>Press "enter" to copy to clipboard</p>
+                        <input id="url-to-shorten" class="input" type="text">
+                        <br>
+                        <a id="shortenedLink" href=""></a>
+                        <span id="longLink"></span>
+                    </div>
+                </div>
+                <hr>
+                <label for="" class="label">URL Configuration</label>
+                <div class="field">
+                    <div class="control">
+                        <input id="alias" placeholder="alias" class="input card-footer-item" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <input id="event" placeholder="event" class="input card-footer-item" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <input id="channel" placeholder="channel" class="input card-footer-item" type="text">
+                    </div>
+                </div>
+            </div>
+    </section>
 </body>
+
 <script type="text/javascript" src="popout.js"></script>
 
 </html>

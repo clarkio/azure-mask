@@ -9,3 +9,5 @@ package
 testing
 
 *.pem
+
+.DS_Store
