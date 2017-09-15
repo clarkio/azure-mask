@@ -28,6 +28,7 @@
   "permissions": [
     "activeTab",
     "storage",
+    "clipboardWrite",
     "*://*.portal.azure.com/*",
     "*://portal.azure.com/*",
     "*://functions.azure.com/*"

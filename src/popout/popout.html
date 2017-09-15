@@ -40,11 +40,16 @@
                 <div class="field">
                     <div class="control">
                         <label for="url-to-shorten" class="label">Enter URL</label>
-                        <p>Press "enter" to shorten</p>
+                        <p>Shortened links are automatically copied to the clipboard.</p>
                     </div>
                 </div>
-                <div class="field">
-                    <input id="url-to-shorten" class="input" type="text">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input id="url-to-shorten" class="input" type="text">
+                    </div>
+                    <div class="control">
+                        <button id="shortenButton" class="button is-primary">Shorten</button>
+                    </div>
                 </div>
                 <div class="field">
                     <a id="shortenedLink" href=""></a>

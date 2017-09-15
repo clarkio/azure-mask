@@ -6,7 +6,7 @@ let allMasksCheckbox = document.getElementById('toggle-all-masks');
 allMasksCheckbox.addEventListener('click', toggleAllMasks);
 
 let shortenURLInput = document.getElementById('url-to-shorten');
-shortenURLInput.addEventListener('keyup', shortenURL);
+shortenURLInput.addEventListener('keyup', handleKeyUp);
 
 let aliasInput = document.getElementById('alias');
 aliasInput.addEventListener('keyup', saveSettings);
@@ -19,6 +19,9 @@ eventInput.addEventListener('keyup', saveSettings);
 
 let shortenedLinkAnchor = document.getElementById('shortenedLink');
 let longLinkSpan = document.getElementById('longLink');
+
+let shortenButton = document.getElementById('shortenButton');
+shortenButton.addEventListener('click', shortenURL);
 
 getSettings();
 
@@ -57,33 +60,45 @@ function injectDisableAllMasks() {
   });
 }
 
-function shortenURL(e) {
-  let fullURL = `${e.target
-    .value}?WT.mc_id=${aliasInput.value}-${channelInput.value}-${eventInput.value}`;
-
+function handleKeyUp(e) {
   if (e.which === 13) {
-    fetch('http://cda.ms/save', {
-      method: 'POST',
-      body: JSON.stringify({
-        url: fullURL
-      }),
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        shortenedLinkAnchor.href = `http://${json.url}`;
-        shortenedLinkAnchor.textContent = json.url;
-
-        longLinkSpan.textContent = fullURL;
-
-        saveSettings();
-      });
+    shortenURL();
   }
+}
+
+function shortenURL() {
+  let fullURL = `${shortenURLInput.value}?WT.mc_id=${aliasInput.value}-${channelInput.value}-${eventInput.value}`;
+
+  fetch('http://cda.ms/save', {
+    method: 'POST',
+    body: JSON.stringify({
+      url: fullURL
+    }),
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(response => {
+      return response.json();
+    })
+    .then(json => {
+      shortenedLinkAnchor.href = `http://${json.url}`;
+      shortenedLinkAnchor.textContent = json.url;
+
+      longLinkSpan.textContent = fullURL;
+
+      // save settings
+      saveSettings();
+
+      // copy the URL to clipboard
+      shortenURLInput.value = json.url;
+
+      shortenURLInput.focus();
+      shortenURLInput.select();
+
+      document.execCommand('copy');
+    });
 }
 
 function getSettings() {
