@@ -1,36 +1,36 @@
 {
-    "manifest_version": 2,
-    "name": "Azure Mask",
-    "version": "1.0.1",
-    "description": "Conceals sensitive Azure information found in the portal views",
-    "icons": { 
-        "16": "/icons/icon16.png",
-        "48": "/icons/icon48.png",
-       "128": "/icons/icon128.png" 
-    },
-    "browser_action": {
-        "default_icon": "/icons/icon16.png",
-        "default_popup": "/popout/popout.html"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://*.portal.azure.com/*",
-                "*://portal.azure.com/*",
-                "*://functions.azure.com/*"
-            ],
-            "js": [
-                "/content-script/mask-process.js"
-            ],
-            "run_at": "document_idle",
-            "all_frames": true
-        }
-    ],
-    "permissions": [
-        "activeTab",
-        "storage",
+  "manifest_version": 2,
+  "name": "Azure Mask",
+  "version": "1.0.1",
+  "description":
+    "Conceals sensitive Azure information found in the portal views",
+  "icons": {
+    "16": "/icons/icon16.png",
+    "48": "/icons/icon48.png",
+    "128": "/icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "/icons/icon16.png",
+    "default_popup": "/popout/popout.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
         "*://*.portal.azure.com/*",
         "*://portal.azure.com/*",
         "*://functions.azure.com/*"
-    ]
+      ],
+      "js": ["/content-script/mask-process.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "clipboardWrite",
+    "*://*.portal.azure.com/*",
+    "*://portal.azure.com/*",
+    "*://functions.azure.com/*"
+  ]
 }
