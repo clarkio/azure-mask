@@ -108,9 +108,11 @@ function getSettings() {
 }
 
 function saveSettings(alias, event, channel, shortenedLink, longLink) {
-  chrome.storage.sync.set({ alias: $alias.val() || '' });
-  chrome.storage.sync.set({ event: $event.val() || '' });
-  chrome.storage.sync.set({ channel: $channel.val() || '' });
-  chrome.storage.sync.set({ shortenedLink: $shortenedLink.el.href || '' });
-  chrome.storage.sync.set({ longLink: $longLink.html() });
+  chrome.storage.sync.set({ 
+    alias: $alias.val() || '',
+    event: $event.val() || '',
+    channel: $channel.val() || '',
+    shortenedLink: $shortenedLink.el.href || '',
+    longLink: $longLink.html()
+  });
 }
