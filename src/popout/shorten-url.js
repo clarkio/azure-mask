@@ -97,7 +97,7 @@ function getSettings() {
       $event.val(result.event || '');
       $channel.val(result.channel || '');
       $shortenedLink.html(result.shortenedLink || '');
-      $shortenedLink.el.href = `http://${result.shortenedLink} || ''`;
+      $shortenedLink.el.href = `http://${result.shortenedLink}` || '';
       $longLink.html(result.longLink || '');
     }
   );
@@ -111,6 +111,6 @@ function saveSettings(alias, event, channel, shortenedLink, longLink) {
   chrome.storage.sync.set({ alias: $alias.val() || '' });
   chrome.storage.sync.set({ event: $event.val() || '' });
   chrome.storage.sync.set({ channel: $channel.val() || '' });
-  chrome.storage.sync.set({ shortenedLink: $shortenedLink.el.href || '' });
+  chrome.storage.sync.set({ shortenedLink: $shortenedLink.html() || '' });
   chrome.storage.sync.set({ longLink: $longLink.html() });
 }
