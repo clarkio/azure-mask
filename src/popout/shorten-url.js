@@ -97,7 +97,7 @@ function getSettings() {
       $event.val(result.event || '');
       $channel.val(result.channel || '');
       $shortenedLink.html(result.shortenedLink || '');
-      $shortenedLink.el.href = `http://${result.shortenedLink} || ''`;
+      $shortenedLink.el.href = `http://${result.shortenedLink}` || '';
       $longLink.html(result.longLink || '');
     }
   );
@@ -108,11 +108,11 @@ function getSettings() {
 }
 
 function saveSettings(alias, event, channel, shortenedLink, longLink) {
-  chrome.storage.sync.set({ 
+  chrome.storage.sync.set({
     alias: $alias.val() || '',
     event: $event.val() || '',
     channel: $channel.val() || '',
-    shortenedLink: $shortenedLink.el.href || '',
+    shortenedLink: $shortenedLink.html() || '',
     longLink: $longLink.html()
   });
 }
