@@ -1,5 +1,3 @@
-console.log('hiiiiiiiiii')
-
 if (/^https:\/\/[^/]+\.azure\.com\//i.test(document.URL)) {
   const isMaskedKeyName = 'isMasked';
   const maskEnabledClassName = 'az-mask-enabled';
