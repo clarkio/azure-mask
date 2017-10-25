@@ -13,6 +13,13 @@ This is a Chrome extension that will mask GUIDs (such as Subscription IDs), emai
 
 ## Install the Extension
 
+#### From Chrome Web Store
+
+1. In Chrome goto [Chrome Web Store](https://chrome.google.com/webstore/search/azure%20mask)
+2. Click on Azure Mask extension
+3. Click on Add To Chrome
+4. Confirm any prompts
+
 #### From Package
 
 1. `git clone git@github.com:clarkio/azure-mask.git`
