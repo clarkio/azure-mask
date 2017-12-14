@@ -6,8 +6,11 @@
 </head>
 
 <body>
-    <section class="section wrapper">
-        <div class="container">
+    <div id="main">
+        <section class="section">
+            <a class="is-pulled-right has-text-weight-bold" id="settingsLink">Settings</a>
+        </section>
+        <section class="section">
             <div class="card">
                 <div class="card-header">
                     <p class="card-header-title">
@@ -26,59 +29,87 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="card">
-            <div class="card-header">
-                <div class="card-header-title">
-                    URL Tracking
-                </div>
-            </div>
-            <div class="card-content">
-                <div class="field">
-                    <div class="control">
-                        <label for="url-to-shorten" class="label">Enter URL</label>
-                        <p>Shortened links are automatically copied to the clipboard.</p>
+        </section>
+        <section id="shortener" class="section" style="display: none">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-title">
+                        URL Tracking
                     </div>
                 </div>
-                <div class="field has-addons">
-                    <div class="control is-expanded">
-                        <input id="url-to-shorten" class="input" type="text">
+                <div class="card-content">
+                    <div class="field">
+                        <div class="control">
+                            <label for="url-to-shorten" class="label">Enter URL</label>
+                            <p>Shortened links are automatically copied to the clipboard.</p>
+                        </div>
                     </div>
-                    <div class="control">
-                        <button id="shortenButton" class="button is-primary">Shorten</button>
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input id="url-to-shorten" class="input" type="text">
+                        </div>
+                        <div class="control">
+                            <button id="shortenButton" class="button is-primary">Shorten</button>
+                        </div>
                     </div>
-                </div>
-                <div class="field">
-                    <a id="shortenedLink" href=""></a>
-                    <span id="longLink"></span>
-                </div>
-                <hr>
-                <label for="" class="label">URL Configuration</label>
-                <div class="field">
-                    <div class="control">
-                        <label for="" class="label">Event</label>
-                        <input id="event" class="input card-footer-item" type="text">
+                    <div class="field">
+                        <a id="shortenedLink" href=""></a>
+                        <span id="longLink"></span>
                     </div>
-                </div>
-                <div class="field">
-                    <div class="control">
-                        <label for="" class="label">Channel</label>
-                        <input id="channel" class="input card-footer-item" type="text">
+                    <hr>
+                    <label for="" class="label">URL Configuration</label>
+                    <div class="field">
+                        <div class="control">
+                            <label for="" class="label">Event</label>
+                            <input id="event" class="input card-footer-item" type="text">
+                        </div>
                     </div>
-                </div>
-                <div class="field">
-                    <div class="control">
-                        <label for="" class="label">Alias</label>
-                        <input id="alias" class="input card-footer-item" type="text">
+                    <div class="field">
+                        <div class="control">
+                            <label for="" class="label">Channel</label>
+                            <input id="channel" class="input card-footer-item" type="text">
+                        </div>
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
+    </div>
+
+    <div id="settings" style="display:none">
+        <section class="section">
+            <span class="is-pulled-right">
+                <a id="backLink" class="has-text-weight-bold">
+                    Back
+                </a>
+            </span>
+            </span>
+        </section>
+        <section class="section">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-title">
+                        Settings
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="field">
+                        <div class="control">
+                            <label for="" class="label">Alias</label>
+                            <input id="alias" class="input card-footer-item" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p>Entering your alias will enable the CDA link shortener</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 
-<script type="text/javascript" src="popout.js"></script>
-<script type="text/javascript" src="shorten-url.js"></script>
+<script src="dollar.js"></script>
+<script src="settings.js"></script>
+<script src="popout.js"></script>
+<script src="shortener.js"></script>
 
 </html>
