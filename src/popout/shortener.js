@@ -28,9 +28,17 @@
   }
 
   function shortenURL() {
-    let separator = $urlToShorten.val().indexOf('?') > 0 ? '&' : '?';
+    let baseUrl = $urlToShorten.val();
+    let separator = baseUrl.indexOf('?') > 0 ? '&' : '?';
+    
+    let hash = "";
+    let hasHash = baseUrl.indexOf("#");
+    if (hasHash != -1) {
+      hash = baseUrl.substr(hasHash);
+      baseUrl = baseUrl.replace(hash, "");
+    }
 
-    let fullURL = `${$urlToShorten.val()}${separator}WT.mc_id=${$event.val()}-${$channel.val()}-${$alias.val()}`;
+    let fullURL = `${baseUrl}${separator}WT.mc_id=${$event.val()}-${$channel.val()}-${$alias.val()}${hash}`;
 
     fetch('http://cda.ms/save', {
       method: 'POST',
