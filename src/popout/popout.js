@@ -38,3 +38,12 @@ function injectDisableAllMasks() {
     allFrames: true
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  var y = document.getElementById("index_link");
+  y.addEventListener("click", openIndex);
+});
+
+function openIndex() {
+  chrome.tabs.create({ active: true, url: "https://aka.ms/publicportal" });
+}
