@@ -2,7 +2,7 @@ const isMaskedKeyName = 'isMasked';
 const maskEnabledClassName = 'az-mask-enabled';
 const sensitiveDataRegex = /^\s*([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})|((([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,})))\s*$/;
 const sensitiveDataClassName = 'azdev-sensitive';
-const blurCss = 'filter: blur(5px);';
+const blurCss = 'filter: blur(10px);';
 const tagNamesToMatch = ['DIV']; // uppercase
 
 // add CSS style to blur
@@ -20,8 +20,7 @@ getStoredMaskedStatus(isMasked => {
 });
 
 // add class to elements already on the screen
-Array
-  .from(document.querySelectorAll(tagNamesToMatch.join()))
+Array.from(document.querySelectorAll(tagNamesToMatch.join()))
   .filter(e => shouldCheckContent(e) && sensitiveDataRegex.test(e.textContent))
   .forEach(e => e.classList.add(sensitiveDataClassName));
 
@@ -45,8 +44,7 @@ const config = {
 observer.observe(document.body, config);
 
 function shouldCheckContent(target, mutationType) {
-  return mutationType === 'characterData'
-    || target && tagNamesToMatch.some(tn => tn === target.tagName);
+  return mutationType === 'characterData' || (target && tagNamesToMatch.some(tn => tn === target.tagName));
 }
 
 function getStoredMaskedStatus(callback) {
