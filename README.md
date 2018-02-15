@@ -13,9 +13,11 @@ This is a browser extension that will mask GUIDs (such as Subscription IDs), ema
 
 ## Install the Extension
 
+### Chrome
+
 #### From Chrome Web Store
 
-1. In Chrome goto [Chrome Web Store](https://chrome.google.com/webstore/search/azure%20mask)
+1. In Chrome go to [Chrome Web Store](https://chrome.google.com/webstore/search/azure%20mask)
 2. Click on Azure Mask extension
 3. Click on Add To Chrome
 4. Confirm any prompts
@@ -38,3 +40,10 @@ This is a browser extension that will mask GUIDs (such as Subscription IDs), ema
 5. Navigate to where you cloned this repo and then choose `/azure-mask/src`
 
 After following these steps you should now see the new extension icon in Chrome.
+
+### Firefox
+
+1. In Firefox go to [azure-mask add-on](https://addons.mozilla.org/en-US/firefox/addon/azure-mask/)
+2. Click "Add to Firefox"
+3. You'll see a pop up notification in the address bar from Firefox. Click "Add"
+4. You'll see a confirmation that it was added. Click "Ok"
