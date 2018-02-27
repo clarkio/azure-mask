@@ -11,7 +11,7 @@ style.appendChild(document.createTextNode(''));
 document.head.appendChild(style);
 
 style.sheet.insertRule(`.${maskEnabledClassName} .azdev-sensitive { ${blurCss} }`);
-style.sheet.insertRule(`.${maskEnabledClassName} .fxs-avatarmenu-username { display: none }`); // hide name instead of blurring
+style.sheet.insertRule(`.${maskEnabledClassName} .fxs-topbar-avatarmenu { ${blurCss} }`); // blur avatar menu for privacy
 style.sheet.insertRule(`.${maskEnabledClassName} input.azc-bg-light { ${blurCss} }`); // input boxes used for keys, connection strings, etc
 style.sheet.insertRule(`.${maskEnabledClassName} a.fxs-topbar-reportbug { display:none; }`); // report a bug button (MS internal only)
 
