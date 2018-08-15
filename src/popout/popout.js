@@ -18,6 +18,13 @@ chrome.tabs.executeScript(
   }
 );
 
+(() => {
+  chrome.storage.local.get({ isMasked: false }, result => {
+    allMasksEnabled = result.isMasked;
+    allMasksCheckbox.checked = allMasksEnabled;
+  });
+})();
+
 function toggleAllMasks() {
   allMasksEnabled = !allMasksEnabled;
   chrome.storage.local.set({ isMasked: allMasksEnabled }, () => {
@@ -39,11 +46,11 @@ function injectDisableAllMasks() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var y = document.getElementById("index_link");
-  y.addEventListener("click", openIndex);
+document.addEventListener('DOMContentLoaded', function() {
+  var y = document.getElementById('index_link');
+  y.addEventListener('click', openIndex);
 });
 
 function openIndex() {
-  chrome.tabs.create({ active: true, url: "https://aka.ms/publicportal" });
+  chrome.tabs.create({ active: true, url: 'https://aka.ms/publicportal' });
 }

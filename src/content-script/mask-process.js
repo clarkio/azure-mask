@@ -2,8 +2,15 @@ const isMaskedKeyName = 'isMasked';
 const maskEnabledClassName = 'az-mask-enabled';
 const sensitiveDataRegex = /^\s*([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})|((([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,})))\s*$/;
 const sensitiveDataClassName = 'azdev-sensitive';
-const blurCss = 'filter: blur(10px);';
 const tagNamesToMatch = ['DIV']; // uppercase
+const svgBlurFilter = `<svg height="0">
+<filter id="f1" >
+<feGaussianBlur stdDeviation="10" />
+</filter >
+</svg >`;
+const blurCss = 'filter: blur(10px);';
+// const blurCss = 'filter: url(#f1);';
+document.body.insertAdjacentHTML('afterbegin', svgBlurFilter);
 
 // add CSS style to blur
 const style = document.createElement('style');
