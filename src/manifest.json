@@ -18,7 +18,7 @@
         "*://*.portal.azure.com/*",
         "*://portal.azure.com/*",
         "*://functions.azure.com/*",
-        "*://portal.azure.*/*"
+        "*://portal.azure.gov/*"
       ],
       "js": ["/content-script/mask-process.js"],
       "run_at": "document_idle",
