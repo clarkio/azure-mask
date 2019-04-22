@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Azure Mask",
-  "version": "1.1.4",
-  "description": "Conceals sensitive Azure information found in the portal views",
+  "name": "Az Mask",
+  "version": "1.1.5",
+  "description": "Does it's best to find and conceal sensitive Azure information found in the portal views",
   "icons": {
     "16": "/icons/icon16.png",
     "48": "/icons/icon48.png",
@@ -22,7 +22,8 @@
       ],
       "js": ["/content-script/mask-process.js"],
       "run_at": "document_idle",
-      "all_frames": true
+      "all_frames": true,
+      "match_about_blank": true
     }
   ],
   "permissions": [
