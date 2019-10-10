@@ -1,3 +1,5 @@
+⚠ This is currently not available in the Chrome Web Store because of a trademark infringement on the name. It has been updated with a name change (az-mask) to comply but has been in a status of "Pending Review" since April 2019. If you know of a way to get this resolved please hit me up ⚠
+
 # Azure Mask
 This is a browser extension that will mask GUIDs (such as Subscription IDs), email addresses, keys, and connection strings with a blur. The intention of the extension is to make it easier to do screen recordings without revealing sensitive, personal, account information that may show up on screen. It will only run and apply against Azure portal URLs. It's available in Chrome and Firefox.
 
