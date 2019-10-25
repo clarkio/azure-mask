@@ -50,3 +50,13 @@ After following these steps you should now see the new extension icon in Chrome.
 2. Click "Add to Firefox"
 3. You'll see a pop up notification in the address bar from Firefox. Click "Add"
 4. You'll see a confirmation that it was added. Click "Ok"
+
+### Edge (based on Chrome)
+
+1. Go to [Releases](https://github.com/clarkio/azure-mask/releases) and download the latest `.crx` file (e.g. `az-mask-1.1.5.crx
+`)
+2. In Edge go to [edge://extensions](edge://extensions)
+3. Check the "Developer mode" option in the bottom-left corner
+4. Find the location where you downloaded the `.crx` file 
+5. Drag the `.crx` file to your Edge window that has the extensions view open
+6. Confirm any prompts
