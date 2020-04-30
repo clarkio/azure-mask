@@ -26,12 +26,13 @@ This is a browser extension that will mask GUIDs (such as Subscription IDs), ema
 
 #### From Package
 
-1. Go to [Releases](https://github.com/clarkio/azure-mask/releases) and download the latest `.crx` file (e.g. `az-mask-1.1.5.crx
+1. Go to [Releases](https://github.com/clarkio/azure-mask/releases) and download the latest `.zip` file (e.g. `az-mask-1.1.5.zip
 `)
-2. In Chrome go to [chrome://extensions](chrome://extensions)
-3. Check the "Developer mode" option in the top-right corner
-4. Find the location where you downloaded the `.crx` file 
-5. Drag the `.crx` file to your Chrome window that has the extensions view open
+2. Go to the folder you downloaded the zip and extract it.
+3. In Chrome go to [chrome://extensions](chrome://extensions)
+4. Check the "Developer mode" option in the top-right corner
+4. Select the button to load extracted extensions. 
+5. Select the folder you created by unpacking in step 2.
 6. Confirm any prompts
 
 #### From Source
