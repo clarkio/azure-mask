@@ -18,7 +18,8 @@
         "*://*.portal.azure.com/*",
         "*://portal.azure.com/*",
         "*://functions.azure.com/*",
-        "*://portal.azure.gov/*"
+        "*://portal.azure.gov/*",
+        "*://*.qnamaker.ai/*"
       ],
       "js": ["/content-script/mask-process.js"],
       "run_at": "document_idle",
@@ -32,6 +33,7 @@
     "clipboardWrite",
     "*://*.portal.azure.com/*",
     "*://portal.azure.com/*",
-    "*://functions.azure.com/*"
+    "*://functions.azure.com/*",
+    "*://*.qnamaker.ai/*"
   ]
 }
