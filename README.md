@@ -15,7 +15,7 @@ This is a browser extension that will do its best to find and mask GUIDs (such a
 
 ## Install the Extension
 
-### Chrome
+### Chrome / Edge
 
 #### From Chrome Web Store
 
@@ -36,11 +36,20 @@ This is a browser extension that will do its best to find and mask GUIDs (such a
 
 #### From Source
 
-1. `git clone git@github.com:clarkio/azure-mask.git`
-2. In Chrome go to [chrome://extensions](chrome://extensions)
-3. Check the "Developer mode" option in the top-right corner
-4. Click the "Load unpacked extension" button
-5. Navigate to where you cloned this repo and then choose `/azure-mask/src`
+1 - `git clone git@github.com:clarkio/azure-mask.git`
+
+2a - (Chrome) In Chrome, navigate to `chrome://extensions/`
+
+2b - (Edge) In Edge, navigate to `edge://extensions/`
+
+3a - (Chrome) In Chrome, check the "Developer mode" option in the top-right corner
+
+3b - (Edge) In Edge, enable the "Developer mode" toggle on the bottom-left corner
+
+4 - Click the "Load unpacked extension" button
+
+5 - Navigate to where you cloned this repo and then choose `/azure-mask/src`
+
 
 After following these steps you should now see the new extension icon in Chrome.
 
