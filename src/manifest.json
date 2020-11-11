@@ -18,7 +18,8 @@
         "*://*.portal.azure.com/*",
         "*://portal.azure.com/*",
         "*://functions.azure.com/*",
-        "*://portal.azure.gov/*"
+        "*://portal.azure.gov/*",
+        "*://portal.azure.cn/*"
       ],
       "js": ["/content-script/mask-process.js"],
       "run_at": "document_idle",
@@ -31,6 +32,8 @@
     "storage",
     "*://*.portal.azure.com/*",
     "*://portal.azure.com/*",
+    "*://portal.azure.gov/*",
+    "*://portal.azure.cn/*",
     "*://functions.azure.com/*"
   ]
 }
