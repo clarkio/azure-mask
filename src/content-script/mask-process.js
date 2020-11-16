@@ -32,6 +32,9 @@ style.sheet.insertRule(
 style.sheet.insertRule(
   `.${maskEnabledClassName} .fxs-mecontrol-flyout { ${blurCss} }`
 ); // user account menu
+style.sheet.insertRule(
+  `.${maskEnabledClassName} #mectrl_currentAccount_secondary { ${blurCss} }`
+); // user account dropdown
 
 getStoredMaskedStatus(isMasked => {
   isMasked
