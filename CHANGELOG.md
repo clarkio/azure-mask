@@ -1,5 +1,15 @@
 # Azure Mask Changelog
 
+
+## 1.1.7 (2021-04-17)
+### Added
+- Email masking in account/user drop-down menu (Thanks to @
+mhdbouk in #65)
+
+## 1.1.6 (2021-04-17)
+### Added
+- Avatar masking (Thanks to @sinedied in #67)
+
 ## 1.1.5 (2019-04-22)
 ### Changed
 - Name to "Az Mask" as "Azure Mask" was taken down due to trademark infringement ("Azure")

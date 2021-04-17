@@ -1,7 +1,7 @@
 ⚠ This is currently not available in the Chrome Web Store because of a trademark infringement on the name. It has been updated with a name change (az-mask) to comply but has been in a status of "Pending Review" since April 2019. If you know of a way to get this resolved please hit me up ⚠
 
 # Azure Mask
-This is a browser extension that will mask GUIDs (such as Subscription IDs), email addresses, keys, and connection strings with a blur. The intention of the extension is to make it easier to do screen recordings without revealing sensitive, personal, account information that may show up on screen. It will only run and apply against Azure portal URLs. It's available in Chrome and Firefox.
+This is a browser extension that will do its best to find and mask GUIDs (such as Subscription IDs), email addresses, keys, and connection strings with a blur. The intention of the extension is to make it easier to do screen recordings without revealing sensitive, personal, account information that may show up on screen. It will only run and apply against Azure portal URLs. It's available in Chrome and Firefox.
 
 ![screen shot](azure-mask-screen-shot.png)
 
@@ -15,7 +15,7 @@ This is a browser extension that will mask GUIDs (such as Subscription IDs), ema
 
 ## Install the Extension
 
-### Chrome
+### Chrome / Edge
 
 #### From Chrome Web Store
 
@@ -26,21 +26,31 @@ This is a browser extension that will mask GUIDs (such as Subscription IDs), ema
 
 #### From Package
 
-1. Go to [Releases](https://github.com/clarkio/azure-mask/releases) and download the latest `.crx` file (e.g. `az-mask-1.1.5.crx
+1. Go to [Releases](https://github.com/clarkio/azure-mask/releases) and download the latest `.zip` file (e.g. `az-mask-1.1.5.zip
 `)
-2. In Chrome go to [chrome://extensions](chrome://extensions)
-3. Check the "Developer mode" option in the top-right corner
-4. Find the location where you downloaded the `.crx` file 
-5. Drag the `.crx` file to your Chrome window that has the extensions view open
+2. Go to the folder you downloaded the zip and extract it.
+3. In Chrome go to [chrome://extensions](chrome://extensions)
+4. Check the "Developer mode" option in the top-right corner
+4. Select the button to load extracted extensions. 
+5. Select the folder you created by unpacking in step 2.
 6. Confirm any prompts
 
 #### From Source
 
-1. `git clone git@github.com:clarkio/azure-mask.git`
-2. In Chrome go to [chrome://extensions](chrome://extensions)
-3. Check the "Developer mode" option in the top-right corner
-4. Click the "Load unpacked extension" button
-5. Navigate to where you cloned this repo and then choose `/azure-mask/src`
+1 - `git clone git@github.com:clarkio/azure-mask.git`
+
+2a - (Chrome) In Chrome, navigate to `chrome://extensions/`
+
+2b - (Edge) In Edge, navigate to `edge://extensions/`
+
+3a - (Chrome) In Chrome, check the "Developer mode" option in the top-right corner
+
+3b - (Edge) In Edge, enable the "Developer mode" toggle on the bottom-left corner
+
+4 - Click the "Load unpacked extension" button
+
+5 - Navigate to where you cloned this repo and then choose `/azure-mask/src`
+
 
 After following these steps you should now see the new extension icon in Chrome.
 
