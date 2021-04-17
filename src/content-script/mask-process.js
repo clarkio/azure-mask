@@ -34,7 +34,20 @@ style.sheet.insertRule(
 ); // user account menu
 style.sheet.insertRule(
   `.${maskEnabledClassName} #mectrl_currentAccount_secondary { ${blurCss} }`
-); // user account dropdown
+); // user account dropdown email address
+style.sheet.insertRule(
+  `.${maskEnabledClassName} .fxs-avatarmenu-tenant-image { display:none; }`
+); // user avatar
+style.sheet.insertRule(
+  `.${maskEnabledClassName} .fxs-avatarmenu-tenant-image-container::after {
+    content: "";
+    display: inline-block;
+    background: url(https://portal.azure.com/Content/static/MsPortalImpl/AvatarMenu/AvatarMenu_defaultAvatarSmall.png) no-repeat;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+  }`
+); // replacement avatar
 
 getStoredMaskedStatus(isMasked => {
   isMasked
