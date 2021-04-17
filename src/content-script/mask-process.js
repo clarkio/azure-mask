@@ -33,6 +33,9 @@ style.sheet.insertRule(
   `.${maskEnabledClassName} .fxs-mecontrol-flyout { ${blurCss} }`
 ); // user account menu
 style.sheet.insertRule(
+  `.${maskEnabledClassName} #mectrl_currentAccount_secondary { ${blurCss} }`
+); // user account dropdown email address
+style.sheet.insertRule(
   `.${maskEnabledClassName} .fxs-avatarmenu-tenant-image { display:none; }`
 ); // user avatar
 style.sheet.insertRule(
