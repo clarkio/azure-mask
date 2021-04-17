@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Az Mask",
-  "version": "1.1.5",
+  "version": "1.1.8",
   "description": "Does it's best to find and conceal sensitive Azure information found in the portal views",
   "icons": {
     "16": "/icons/icon16.png",
@@ -19,9 +19,12 @@
         "*://portal.azure.com/*",
         "*://functions.azure.com/*",
         "*://portal.azure.gov/*",
-        "*://portal.azure.cn/*"
+        "*://portal.azure.cn/*",
+        "*://*.qnamaker.ai/*"
       ],
-      "js": ["/content-script/mask-process.js"],
+      "js": [
+        "/content-script/mask-process.js"
+      ],
       "run_at": "document_idle",
       "all_frames": true,
       "match_about_blank": true
@@ -34,6 +37,7 @@
     "*://portal.azure.com/*",
     "*://portal.azure.gov/*",
     "*://portal.azure.cn/*",
-    "*://functions.azure.com/*"
+    "*://functions.azure.com/*",
+    "*://*.qnamaker.ai/*"
   ]
 }

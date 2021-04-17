@@ -32,6 +32,31 @@ style.sheet.insertRule(
 style.sheet.insertRule(
   `.${maskEnabledClassName} .fxs-mecontrol-flyout { ${blurCss} }`
 ); // user account menu
+style.sheet.insertRule(
+  `.${maskEnabledClassName} #mectrl_currentAccount_secondary { ${blurCss} }`
+); // user account dropdown email address
+style.sheet.insertRule(
+  `.${maskEnabledClassName} .fxs-avatarmenu-tenant-image { display:none; }`
+); // user avatar
+style.sheet.insertRule(
+  `.${maskEnabledClassName} .fxs-avatarmenu-tenant-image-container::after {
+    content: "";
+    display: inline-block;
+    background: url(https://portal.azure.com/Content/static/MsPortalImpl/AvatarMenu/AvatarMenu_defaultAvatarSmall.png) no-repeat;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+  }`
+); // replacement avatar
+style.sheet.insertRule(
+  `.${maskEnabledClassName} textarea.bg-white { ${blurCss} }`
+); // deployment box in (QnA maker portal)
+style.sheet.insertRule(
+  `.${maskEnabledClassName} span.qna-cs-user-id { display: none }`
+); // hide user id in profile side menu (QnA maker portal)
+style.sheet.insertRule(
+  `.${maskEnabledClassName} div.directory-list-element-id { ${blurCss} }`
+); // profile side menu in (QnA maker portal)
 
 getStoredMaskedStatus(isMasked => {
   isMasked
