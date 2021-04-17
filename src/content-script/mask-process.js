@@ -48,6 +48,15 @@ style.sheet.insertRule(
     border-radius: 28px;
   }`
 ); // replacement avatar
+style.sheet.insertRule(
+  `.${maskEnabledClassName} textarea.bg-white { ${blurCss} }`
+); // deployment box in (QnA maker portal)
+style.sheet.insertRule(
+  `.${maskEnabledClassName} span.qna-cs-user-id { display: none }`
+); // hide user id in profile side menu (QnA maker portal)
+style.sheet.insertRule(
+  `.${maskEnabledClassName} div.directory-list-element-id { ${blurCss} }`
+); // profile side menu in (QnA maker portal)
 
 getStoredMaskedStatus(isMasked => {
   isMasked
