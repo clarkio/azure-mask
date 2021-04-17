@@ -2,16 +2,16 @@
 
 ## 1.1.8 (2021-04-17)
 ### Added
-- Hiding of sensitive data in QnA maker portal (Thanks to @taqabubaker in https://github.com/clarkio/azure-mask/pull/63)
+- Hiding of sensitive data in QnA maker portal (Thanks to @taqabubaker in [#63](https://github.com/clarkio/azure-mask/pull/63))
 
 ## 1.1.7 (2021-04-17)
 ### Added
 - Email masking in account/user drop-down menu (Thanks to @
-mhdbouk in https://github.com/clarkio/azure-mask/pull/65)
+mhdbouk in [#65](https://github.com/clarkio/azure-mask/pull/65))
 
 ## 1.1.6 (2021-04-17)
 ### Added
-- Avatar masking (Thanks to @sinedied in https://github.com/clarkio/azure-mask/pull/67)
+- Avatar masking (Thanks to @sinedied in [#67](https://github.com/clarkio/azure-mask/pull/67))
 
 ## 1.1.5 (2019-04-22)
 ### Changed
