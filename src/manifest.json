@@ -19,7 +19,9 @@
         "*://portal.azure.com/*",
         "*://functions.azure.com/*",
         "*://portal.azure.gov/*",
-        "*://*.qnamaker.ai/*"
+        "*://*.qnamaker.ai/*",
+        "*://adf.azure.com/*",
+        "*://ms-adf.azure.com/*"
       ],
       "js": [
         "/content-script/mask-process.js"
@@ -35,6 +37,8 @@
     "*://*.portal.azure.com/*",
     "*://portal.azure.com/*",
     "*://functions.azure.com/*",
-    "*://*.qnamaker.ai/*"
+    "*://*.qnamaker.ai/*",
+    "*://adf.azure.com/*",
+    "*://ms-adf.azure.com/*"
   ]
 }
