@@ -18,7 +18,7 @@
         "*://*.portal.azure.com/*",
         "*://portal.azure.com/*",
         "*://functions.azure.com/*",
-        "*://portal.azure.gov/*",
+        "*://portal.azure.us/*",
         "*://*.qnamaker.ai/*"
       ],
       "js": [
