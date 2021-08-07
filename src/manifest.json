@@ -21,7 +21,8 @@
         "*://portal.azure.gov/*",
         "*://*.qnamaker.ai/*",
         "*://adf.azure.com/*",
-        "*://ms-adf.azure.com/*"
+        "*://ms-adf.azure.com/*",
+        "*://portal.azure.cn/*"
       ],
       "js": [
         "/content-script/mask-process.js"
@@ -36,6 +37,8 @@
     "storage",
     "*://*.portal.azure.com/*",
     "*://portal.azure.com/*",
+    "*://portal.azure.gov/*",
+    "*://portal.azure.cn/*",
     "*://functions.azure.com/*",
     "*://*.qnamaker.ai/*",
     "*://adf.azure.com/*",
