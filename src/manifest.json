@@ -19,6 +19,7 @@
         "*://portal.azure.com/*",
         "*://functions.azure.com/*",
         "*://portal.azure.gov/*",
+        "*://portal.azure.cn/*",
         "*://*.qnamaker.ai/*"
       ],
       "js": [
@@ -34,6 +35,8 @@
     "storage",
     "*://*.portal.azure.com/*",
     "*://portal.azure.com/*",
+    "*://portal.azure.gov/*",
+    "*://portal.azure.cn/*",
     "*://functions.azure.com/*",
     "*://*.qnamaker.ai/*"
   ]
