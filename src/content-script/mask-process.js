@@ -57,6 +57,12 @@ style.sheet.insertRule(
 style.sheet.insertRule(
   `.${maskEnabledClassName} div.directory-list-element-id { ${blurCss} }`
 ); // profile side menu in (QnA maker portal)
+style.sheet.insertRule(
+  `.${maskEnabledClassName} .userEmail { display:none; }`
+); // hide name instead of blurring (ADF)
+style.sheet.insertRule(
+  `.${maskEnabledClassName} .user-email { ${blurCss} }`
+); // user account dropdown email address (ADF)
 
 getStoredMaskedStatus(isMasked => {
   isMasked
