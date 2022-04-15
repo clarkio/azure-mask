@@ -1,4 +1,14 @@
+<div align="center">
+  
 # Azure Mask (Az Mask)
+
+[![Known Vulnerabilities](https://snyk.io/test/github/clarkio/chakeyra/badge.svg)](https://snyk.io/test/github/clarkio/chakeyra)
+![GitHub](https://img.shields.io/github/license/clarkio/chakeyra)
+![Discord](https://img.shields.io/discord/421902136457035777)
+![Twitch Status](https://img.shields.io/twitch/status/clarkio)
+
+</div>
+
 This is a browser extension that will do its best to find and mask GUIDs (such as Subscription IDs), email addresses, keys, and connection strings with a blur. The intention of the extension is to make it easier to do screen recordings without revealing sensitive, personal, account information that may show up on screen. It will only run and apply against Azure portal URLs ([see manifest.json for specifics](https://github.com/clarkio/azure-mask/blob/master/src/manifest.json#L32)). It's available in Chromium based browsers and Firefox.
 
 ![screen shot](azure-mask-screen-shot.png)
