@@ -2,8 +2,8 @@
   
 # Azure Mask (Az Mask)
 
-[![Known Vulnerabilities](https://snyk.io/test/github/clarkio/chakeyra/badge.svg)](https://snyk.io/test/github/clarkio/chakeyra)
-![GitHub](https://img.shields.io/github/license/clarkio/chakeyra)
+[![Known Vulnerabilities](https://snyk.io/test/github/clarkio/azure-mask/badge.svg)](https://snyk.io/test/github/clarkio/azure-mask)
+![GitHub](https://img.shields.io/github/license/clarkio/azure-mask)
 ![Discord](https://img.shields.io/discord/421902136457035777)
 ![Twitch Status](https://img.shields.io/twitch/status/clarkio)
 
