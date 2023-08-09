@@ -70,3 +70,6 @@ After following these steps you should now see the new extension icon in Chrome.
 2. Click "Add to Firefox"
 3. You'll see a pop up notification in the address bar from Firefox. Click "Add"
 4. You'll see a confirmation that it was added. Click "Ok"
+
+
+
