@@ -3,9 +3,9 @@ let allMasksEnabled = true;
 let allMasksCheckbox = document.getElementById('toggle-all-masks');
 allMasksCheckbox.addEventListener('click', toggleAllMasks);
 
-chrome.tabs.executeScript(
+chrome.scripting.executeScript(
   {
-    code: "document.body.classList.contains('az-mask-enabled');",
+    function: isAzMaskClassFound,
     allFrames: true
   },
   results => {
@@ -16,6 +16,10 @@ chrome.tabs.executeScript(
   }
 );
 
+function isAzMaskClassFound() {
+  return document.body.classList.contains('az-mask-enabled');
+}
+
 function toggleAllMasks() {
   allMasksEnabled = !allMasksEnabled;
   chrome.storage.local.set({ isMasked: allMasksEnabled }, () => {
@@ -24,20 +28,28 @@ function toggleAllMasks() {
 }
 
 function injectEnableAllMasks() {
-  chrome.tabs.executeScript({
-    code: "document.body.classList.add('az-mask-enabled');",
+  chrome.scripting.executeScript({
+    function: addAzMaskClass,
     allFrames: true
   });
 }
 
 function injectDisableAllMasks() {
-  chrome.tabs.executeScript({
-    code: "document.body.classList.remove('az-mask-enabled');",
+  chrome.scripting.executeScript({
+    function: removeAzMaskClass,
     allFrames: true
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+function addAzMaskClass() {
+  return document.body.classList.add('az-mask-enabled');
+}
+
+function removeAzMaskClass() {
+  return document.body.classList.remove('az-mask-enabled');
+}
+
+document.addEventListener('DOMContentLoaded', function () {
   var y = document.getElementById('index_link');
   y.addEventListener('click', openIndex);
 });

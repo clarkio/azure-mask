@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Az Mask",
   "version": "1.1.10",
   "description": "Does it's best to find and conceal sensitive Azure information found in the portal views",
@@ -8,7 +8,7 @@
     "48": "/icons/icon48.png",
     "128": "/icons/icon128.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": "/icons/icon16.png",
     "default_popup": "/popout/popout.html"
   },
@@ -34,7 +34,9 @@
   ],
   "permissions": [
     "activeTab",
-    "storage",
+    "storage"
+  ],
+  "host_permissions": [
     "*://*.portal.azure.com/*",
     "*://portal.azure.com/*",
     "*://portal.azure.us/*",
